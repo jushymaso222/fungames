@@ -29,7 +29,7 @@ const sizing = {
   heading: 80,
   heading2: 60,
   heading3: 30,
-  keyboardy: 850,
+  keyboardy: 900,
   keyboarddis : 90
 }
 
@@ -38,7 +38,6 @@ if(mode == "desktop") {
   percentSize = 100;
   sizing.canvaswidth = window.innerWidth;
   sizing.xposition = window.innerWidth/2-270
-  sizing.keyboardy = 900;
 } else if (mode == "phone") {
   sizing.xposition = 100;
   sizing.canvaswidth = 740
