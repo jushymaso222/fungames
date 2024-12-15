@@ -7,7 +7,7 @@ let gameLoop = true;
 
 let mode;
 
-if (window.innerWidth < 450) {
+if (window.innerWidth < 500) {
   mode = "phone";
 } else {
   mode = "desktop";
