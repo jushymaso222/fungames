@@ -278,23 +278,23 @@ function draw() {
   textSize(sizing.heading);
   text(`Wordle`, (sizing.canvaswidth/2)-(textWidth(`Wordle`)/2),(sizing.yposition/2)+textDescent()*2)
   
-  if (currentGuess > 5 && guess != wordToGuess) {
+  if (winTally == 5) {
     hideKeys = true;
     textFont(font);
     noStroke();
     fill(255);
     textSize(sizing.heading2);
-    text("You Lose!", (sizing.canvaswidth/2)-(textWidth("You Lose!")/2),sizing.yposition+(sizing.distance*7))
-    text(`The word was: ${wordToGuess.toUpperCase()}`, (sizing.canvaswidth/2)-(textWidth(`The word was: ${wordToGuess.toUpperCase()}`)/2),sizing.yposition+(sizing.distance*8)-(sizing.distance/2))
+    text("You Win!", (sizing.canvaswidth/2)-(textWidth("You Win!")/2),sizing.yposition+(sizing.distance*7))
     noLoop()
   } else {
-    if (winTally == 5) {
+    if (currentGuess > 5 && guess != wordToGuess) {
       hideKeys = true;
       textFont(font);
       noStroke();
       fill(255);
       textSize(sizing.heading2);
-      text("You Win!", (sizing.canvaswidth/2)-(textWidth("You Win!")/2),sizing.yposition+(sizing.distance*7))
+      text("You Lose!", (sizing.canvaswidth/2)-(textWidth("You Lose!")/2),sizing.yposition+(sizing.distance*7))
+      text(`The word was: ${wordToGuess.toUpperCase()}`, (sizing.canvaswidth/2)-(textWidth(`The word was: ${wordToGuess.toUpperCase()}`)/2),sizing.yposition+(sizing.distance*8)-(sizing.distance/2))
       noLoop()
     }
   }
