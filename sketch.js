@@ -7,11 +7,17 @@ let gameLoop = true;
 
 let mode;
 
-if (window.innerWidth < 700) {
-  mode = "phone";
-} else {
-  mode = "desktop";
+function detectDevice() {
+  const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+  if (/mobile/i.test(userAgent)) {
+    return "phone";
+  } else {
+    return "desktop";
+  }
 }
+
+mode = detectDevice()
 
 const sizing = {
   canvaswidth: 800,
