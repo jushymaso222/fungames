@@ -43,7 +43,6 @@ if(mode == "desktop") {
   sizing.xposition = 100;
   sizing.canvaswidth = 740
   percentSize = (window.innerWidth/sizing.canvaswidth)*100;
-  sizing.yposition = 100;
 }
 
 for (let size in sizing) {
