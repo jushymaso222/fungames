@@ -274,13 +274,11 @@ function draw() {
     })
   });
   
-  if (mode == "desktop") {
-    textFont(font);
-    noStroke();
-    fill(255);
-    textSize(sizing.heading);
-    text(`Wordle`, (sizing.canvaswidth/2)-(textWidth(`Wordle`)/2),(sizing.yposition/2)+textDescent()*2)
-  }
+  textFont(font);
+  noStroke();
+  fill(255);
+  textSize(sizing.heading);
+  text(`Wordle`, (sizing.canvaswidth/2)-(textWidth(`Wordle`)/2),(sizing.yposition/2)+textDescent()*2)
   
   if (currentGuess > 5 && guess != wordToGuess) {
     hideKeys = true;
