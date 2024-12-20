@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.1/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.1/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+    <style>
+      /* body {
+        
+      } */
+
+      #centered {
+        margin: 0;
+        display: flex;
+        flex-direction: column; /* Stack navbar and canvas vertically */
+        align-items: center;
+        height: 100vh;
+        background-color: inherit;
+      }
+  
+      main {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%; /* Ensure it occupies the available space */
+        position: relative; /* Avoid overlapping issues */
+        background-color: inherit;
+      }
+  
+      canvas {
+        display: block;
+      }
+    </style>
+  </head>
+  <body> 
+    <nav>
+      <div id="stuff">
+        <a href="index.html"><h2>Games</h2></a>
+        <h1 id="game-title">Minesweeper</h1>
+        <h2>Settings</h2>
+      </div>
+    </nav>
+    <div id="centered">
+      <main id="main">
+        <!-- The canvas will be appended here -->
+      </main>
+    </div>
+    <script src="games/minesweeper/grid.js"></script>
+    <script src="games/minesweeper/sketch.js"></script>
+    <script src="restart.js"></script>
+    <script>
+      // Disable right-click on the entire page
+      document.addEventListener('contextmenu', function(event) {
+        event.preventDefault(); // This prevents the context menu from appearing
+      });
+    </script>
+  </body>
+</html>

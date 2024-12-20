@@ -1,16 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.1/p5.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.1/addons/p5.sound.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="utf-8" />
 
   </head>
   <body> 
+    <nav>
+      <div id="stuff">
+        <h2>Games</h2>
+        <h1>Game List</h1>
+        <h2>Settings</h2>
+      </div>
+    </nav>
+
+    <main class="game-selection">
+        <div class="game-tile" onclick="location.href='wordle.html';">
+            <img src="images/tiles/wordle.png" alt="Wordle Preview">
+            <a href=""><h2>Wordle</h2></a>
+            <p>Can you guess the 5 letter word in 6 tries or less?</p>
+        </div>
+        <div class="game-tile" onclick="location.href='minesweeper.html';">
+          <img src="images/tiles/minesweeper.png" alt="Minesweeper Preview">
+          <h2>Minesweeper</h2>
+          <p>Find and avoid all of the bombs!</p>
+      </div>
+    </main>
   </body>
-  <script src="wordlist.js"></script>
-  <script src="sketch.js"></script>
-  <script src="virtualkey.js"></script>
-  <script src="cell.js"></script>
 </html>

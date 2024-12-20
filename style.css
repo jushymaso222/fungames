@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+
 html, body {
   margin: 0;
   padding: 0;
   background-color: rgb(21, 21, 21);
+  width: 100%;
 }
 canvas {
   display: block;
@@ -30,4 +33,142 @@ centered {
   height: auto; /* Example height, adjust as needed */
   background-color: #f0f0f0; /* Optional for visibility */
   text-align: center; /* Centers inline content within the div */
+}
+
+nav {
+  background-color: #333; /* Dark background for the navbar */
+  color: white; /* Text color */
+  padding: 10px 20px; /* Add some padding for spacing */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  font-family: "Dosis", serif;
+  border-bottom: 2px solid orange;
+}
+
+/* Flexbox layout for alignment */
+#stuff {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Spreads the items evenly */
+}
+
+/* Styling the headings */
+#stuff h1 {
+  font-size: 30pt;
+  margin: 0;
+  font-weight: bold;
+}
+
+#stuff h2 {
+  font-size: 20pt;
+  margin: 0;
+  font-weight: normal;
+  cursor: pointer; /* Makes it look clickable */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Hover effect for h2 items */
+#stuff h2:hover {
+  color: #ffa500; /* Highlight with an orange color */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  #stuff {
+    flex-direction: column; /* Stack items on smaller screens */
+    align-items: flex-start; /* Align to the left */
+  }
+
+  #stuff h1 {
+    margin-bottom: 10px; /* Add spacing */
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.game-selection {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Exactly 5 columns */
+  gap: 20px;
+  padding: 20px;
+  justify-content: center; /* Center the tiles horizontally */
+  width: calc(5 * 300px + 4 * 20px); /* Exact width for 5 tiles with gaps */
+  margin: 0 auto; /* Center the grid container itself */
+}
+
+/* Individual game tiles */
+.game-tile {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  max-width: 300px; /* Maximum width for tiles */
+  margin: 0 auto; /* Center align the tile in its grid column */
+  border: 2px solid white;
+}
+
+.game-tile img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.game-tile h2 {
+  margin: 10px 0;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.game-tile p {
+  padding: 0 15px 15px;
+  font-size: 1em;
+  color: #555;
+}
+
+.game-tile:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive design */
+@media (max-width: 1280px) {
+  .game-selection {
+    grid-template-columns: repeat(4, 1fr); /* Adjust to 4 tiles per row */
+    width: calc(4 * 300px + 3 * 20px); /* Exact width for 4 tiles with gaps */
+  }
+}
+
+@media (max-width: 1024px) {
+  .game-selection {
+    grid-template-columns: repeat(3, 1fr); /* Adjust to 3 tiles per row */
+    width: calc(3 * 300px + 2 * 20px); /* Exact width for 3 tiles with gaps */
+  }
+}
+
+@media (max-width: 768px) {
+  .game-selection {
+    grid-template-columns: repeat(2, 1fr); /* Adjust to 2 tiles per row */
+    width: calc(2 * 300px + 1 * 20px); /* Exact width for 2 tiles with gaps */
+  }
+}
+
+@media (max-width: 480px) {
+  .game-selection {
+    grid-template-columns: repeat(1, 1fr); /* Adjust to 1 tile per row */
+    width: 300px; /* Exact width for 1 tile */
+  }
+}
+
+#game-title {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+#game-title:hover {
+  color: #f00; /* Optional: Change the hover text color */
 }
