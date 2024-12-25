@@ -101,7 +101,7 @@ function mousePressed() {
 }
 
 function draw() {
-  background(220);
+  background(21);
   
   if (!setupD) {
     let centerX = width / 2; // Center X of the canvas
@@ -129,7 +129,7 @@ function draw() {
     text("Hard", centerX - textWidth("Hard") / 2, startY + 2 * (rectHeight + padding) + rectHeight / 2 + 15);
 
     // Draw the title above the rectangles
-    fill(0, 0, 0);
+    fill(255);
     textSize(30);
     text("Choose your difficulty:", centerX - textWidth("Choose your difficulty:") / 2, startY - 30);
   } else {

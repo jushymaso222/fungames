@@ -52,13 +52,13 @@ class Grid {
     for (let i=0; i<this.width; i++) {
       for (let r=0; r<this.height; r++) {
         let x = i*this.pix, y = r*this.pix;
-        stroke(0,0,0);
-        strokeWeight(1);
+        stroke(21);
+        strokeWeight(2);
         textSize(10);
         if (flagged[i][r]) {
           fill(204,102,0);
         } else {
-          fill(222,222,222);
+          fill(40);
         }
         square(x, y, this.pix)
         

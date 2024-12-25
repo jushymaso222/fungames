@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.1/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.1/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+
+    <style>
+      #centered {
+        margin: 0;
+        display: flex;
+        flex-direction: column; /* Stack navbar and canvas vertically */
+        align-items: center;
+        height: 100vh;
+        background-color: inherit;
+      }
+  
+      main {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%; /* Ensure it occupies the available space */
+        position: relative; /* Avoid overlapping issues */
+        background-color: inherit;
+      }
+    </style>
+
+  </head>
+  <body>
+    <nav>
+      <div id="stuff">
+        <a href="../../index.html"><h2>Games</h2></a>
+        <h1 id="game-title">Poker</h1>
+        <h2>Settings</h2>
+      </div>
+    </nav>
+    <div id="centered">
+      <main>
+      </main>
+    </div>
+
+    <script src="sketch.js"></script>
+    <script src="card.js"></script>
+    <script src="button.js"></script>
+  </body>
+</html>
