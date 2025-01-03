@@ -10,7 +10,7 @@ class Button {
     radius = 10;
     textColor = color(255);
 
-    constructor(x, y, label, color) {
+    constructor(x, y, label, color, action) {
         this.x = x;
         this.y = y;
         this.label = label;
@@ -18,6 +18,7 @@ class Button {
         let textHeight = textAscent() + textDescent();
         this.height = textHeight*1.3;
         this.fillColor = color;
+        this.action = action;
     }
 
     show() {
@@ -37,6 +38,13 @@ class Button {
         textSize(sizing.buttonText);
 
         text(this.label, this.x + ((this.width - textWidth(this.label)) / 2), this.y + (this.height / 2) + (textAscent() / 2) - (textDescent() / 2));
+    }
 
+    checkClick(mousex, mousey) {
+        if (mousex > this.x && mousex < this.x+this.width && mousey > this.y && mousey < this.y+this.height) {
+            return this.action;
+        } else {
+            return false;
+        }
     }
 }
