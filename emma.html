@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be Mine?</title>
+    <link rel="stylesheet" href="valstyle.css">
+</head>
+<body>
+    <div id="wrapper">
+        <video width="800" height="800" muted id="envOpen">
+            <source src="images/envOpen.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+    </div>
+    
+    <button onclick="playVideo()" type="button" id="playButton">Open the Card!</button>
+    <button onclick="yes()" type="button" id="yesButton" class="button hidden">Yes!</button>
+    <button onclick="no()" type="button" id="noButton" class="button hidden">No</button>
+</body>
+
+<script src="play.js"></script>
+</html>

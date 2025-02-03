@@ -1,6 +1,8 @@
-let objects;
+let objects = [];
+let objectActive = true;
 let menu = "startMenu";
 let textHeight;
+let currentSelection;
 let sizing = {
   canvasWidth: 1600,
   canvasHeight: 1000,
@@ -11,6 +13,11 @@ let sizing = {
 
 function preload() {
 
+}
+
+function dumpObjects() {
+  objects = [];
+  objectActive = true;
 }
 
 function setup() {
@@ -24,6 +31,7 @@ function setup() {
   }
 
   createCanvas(sizing.canvasWidth, sizing.canvasHeight);
+  dumpObjects();
 }
 
 function mousePressed() {
@@ -32,11 +40,25 @@ function mousePressed() {
       let action = objects[i].checkClick(mouseX, mouseY);
       if (action == "select") {
         menu = "selectmap"
+        dumpObjects()
       } else if (action == "create") {
         menu = "createmap"
+        dumpObjects()
       } else if (action == "main") {
         menu = "startMenu"
+        dumpObjects()
+      } else if (action == "startBlock") {
+        currentSelection = "Starting Block"
+      } else if (action == "pathBlock") {
+        currentSelection = "Path Block"
+      } else if (action == "finishBlock") {
+        currentSelection = "Finishing Block"
+      } else if (action == "saveMap") {
+        
       }
+    } else if (objects[i] instanceof Tile) {
+      let con = objects[i].checkClick(mouseX, mouseY, currentSelection)
+      console.log(con)
     }
   }
 }
@@ -46,8 +68,6 @@ function keyPressed() {
 }
 
 function draw() {
-  objects = [];
-
   background(255);
   if (menu == "startMenu") {
     startMenu(objects);

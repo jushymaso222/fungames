@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+#wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+}
+
+html {
+    background-color: azure;
+}
+
+#envOpen {
+    border: 3px solid black;
+    border-radius: 20px;
+}
+
+#playButton {
+    position: absolute;
+    top: 50%; /* Moves button to the middle vertically */
+    left: 50%; /* Moves button to the middle horizontally */
+    transform: translate(-50%, -50%); /* Centers the button */
+
+    font-family: 'Nunito';
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 30pt;
+}
+
+.button {
+    font-family: "Nunito";
+    font-size: 25pt;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 3px solid rgb(133, 10, 10);
+    border-radius: 25px;
+    color: white;
+    background-color: rgb(244, 110, 110);
+}
+
+#yesButton {
+    position: absolute;
+    top: 35%; /* Moves button to the middle vertically */
+    left: 50%; /* Moves button to the middle horizontally */
+    transform: translate(-50%, -50%); /* Centers the button */
+}
+
+#yesButton:hover {
+    color: pink;
+    cursor: pointer;
+}
+
+#noButton:hover {
+    color: rgb(100, 199, 232);
+    cursor: pointer;
+}
+
+#noButton {
+    position: absolute;
+    top: 45%; /* Moves button to the middle vertically */
+    left: 60%; /* Moves button to the middle horizontally */
+    transform: translate(-50%, -50%); /* Centers the button */
+}
+
+#playButton:hover {
+    color: pink;
+    cursor: pointer;
+}

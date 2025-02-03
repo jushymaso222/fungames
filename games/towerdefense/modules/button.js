@@ -14,9 +14,9 @@ class Button {
         this.x = x;
         this.y = y;
         this.label = label;
-        this.width = textWidth(label)*1.3;
-        let textHeight = textAscent() + textDescent();
-        this.height = textHeight*1.3;
+        this.width = textWidth(this.label)*1.3;
+        this.textHeight = textAscent() + textDescent();
+        this.height = this.textHeight*1.3;
         this.fillColor = color;
         this.action = action;
     }
