@@ -53,7 +53,7 @@ html {
 
 #yesButton {
     position: absolute;
-    top: 35%; /* Moves button to the middle vertically */
+    top: 45%; /* Moves button to the middle vertically */
     left: 50%; /* Moves button to the middle horizontally */
     transform: translate(-50%, -50%); /* Centers the button */
 }
