@@ -71,7 +71,7 @@ html {
 #noButton {
     position: absolute;
     top: 45%; /* Moves button to the middle vertically */
-    left: 60%; /* Moves button to the middle horizontally */
+    left: 70%; /* Moves button to the middle horizontally */
     transform: translate(-50%, -50%); /* Centers the button */
 }
 
